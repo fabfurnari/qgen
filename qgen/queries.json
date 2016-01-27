@@ -1,0 +1,41 @@
+{"select":
+ {
+     "weight": 10,
+     "queries":
+     [
+         "SELECT {{ all }} FROM `{{ random_table }}` LIMIT 20",
+         "SELECT {{ all }} FROM `{{ random_table }}` LIMIT 10",
+         "SELECT `{{ random_column }}` FROM `{{ random_table }}` LIMIT 20",
+         "SELECT COUNT({{ all }}) FROM `{{ random_table }}` LIMIT 20",
+         "SELECT COUNT(`{{ random_column }}`) FROM `{{ random_table }}` LIMIT 20",
+         "SELECT DISTINCT {{ all }} FROM  `{{ random_table }}` LIMIT 20",
+         "SELECT DISTINCT `{{ random_column }}` FROM `{{ random_table }}` LIMIT 20",
+         "SELECT {{ all }} FROM `{{ random_table }}` ORDER BY `{{ random_column }}` LIMIT 20",
+         "SELECT {{ all }} FROM `{{ random_table }}` WHERE `{{ random_column }}` = '{{ random_value }}' LIMIT 30"
+     ]
+ },
+ "update":
+ {
+     "weight": 1,
+     "queries":
+     [
+         "UPDATE IGNORE `{{ random_table }}` SET `{{ second_random_column }}` = '{{ appropriate_value }}' WHERE `{{ random_column }}` = '{{ random_value }}' LIMIT 10"
+     ]
+ },
+ "insert":
+ {
+     "weight": 0,
+     "queries": 
+     [
+         "INSERT {{ row }}"
+     ]
+ },
+ "delete":
+ {
+     "weight": 1,
+     "queries": 
+     [
+         "DELETE FROM `{{ random_table }}` WHERE `{{ random_column }}` = '{{ random_value }}' LIMIT 2"
+     ]
+ }
+}
