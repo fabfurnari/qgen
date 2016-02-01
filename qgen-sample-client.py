@@ -13,7 +13,7 @@ parser.add_argument('--host',required=False,default=os.environ.get('QGEN_DB_HOST
 parser.add_argument('--username',default=os.environ.get('QGEN_DB_USER', 'employees'), required=False, help='The database username')
 parser.add_argument('--password',default=os.environ.get('QGEN_DB_PASS', 'password'), required=False, help='The database password')
 parser.add_argument('--dbname',default=os.environ.get('QGEN_DB_NAME', 'employees'), required=False, help='The database name')
-parser.add_argument('--queries',default=os.environ.get('QGEN_TEMPLATE_FILE', 'qgen/queries.json'), required=False, help='The queries template file')
+parser.add_argument('--queries',default=os.environ.get('QGEN_TEMPLATE_FILE', 'data/queries.json'), required=False, help='The queries template file')
 parser.add_argument('--verbs',nargs='+', required=False, help='List of space-separated verbs like select, insert, update and so on')
 parser.add_argument('--dry-run',action='store_true',default=None, help='Do not really execute queries')
 parser.add_argument('--loglevel',default='INFO',required=False,choices=['DEBUG','INFO','WARNING','ERROR','CRITICAL'], help='Log level')

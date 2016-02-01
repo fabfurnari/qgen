@@ -37,7 +37,7 @@ Using the **sample-client.py** script in the top folder is very easy. You can ed
   >                         --username testuser \
   >                         --password testpassword \
   >                         --dbname testdb \
-  >                         --queries qgen/queries.json \ 
+  >                         --queries data/queries.json \ 
   >                         --verbs select
 
 To use also the ``UPDATE`` and ``DELETE`` verbs (**THIS WILL ALTER DATA IN YOUR DATABASE!**)
@@ -62,7 +62,7 @@ Or alternatively you can user evironment variables:
 
 .. code-block:: bash
 
-  $ QGEN_DB_HOST=192.168.6.60 QGEN_DB_USER=employees QGEN_DB_PASS=password QGEN_DB_NAME=employees QGEN_TEMPLATE_FILE=qgen/queries.json python sample-client.py
+  $ QGEN_DB_HOST=192.168.6.60 QGEN_DB_USER=employees QGEN_DB_PASS=password QGEN_DB_NAME=employees QGEN_TEMPLATE_FILE=data/queries.json python sample-client.py
 
 See ``sample-client.py --help`` to obtain more information about usage.
 

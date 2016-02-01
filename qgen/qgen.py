@@ -4,7 +4,7 @@ Example:
     Very simple QGen module usage
 
       >>> from qgen import QGen
-      >>> queries = json.loads(open('qgen/queries.json').read())  #Load a dictionary from file (see below for dictionary formatting)
+      >>> queries = json.loads(open('data/queries.json').read())  #Load a dictionary from file (see below for dictionary formatting)
       >>> verbs = ['select','insert'] # Use only SELECT and INSERT verbs
       >>> q = qgen.QGen(db_host='localhost',db_user='someuser',db_pass'somepass', db_name='somename',queries_template=queries,allowed_verbs=verbs)
       >>> q.tables # to inspect the tables schema
