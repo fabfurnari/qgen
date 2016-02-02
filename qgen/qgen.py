@@ -41,7 +41,7 @@ import time
 import datetime
 import string
 
-from exceptions import QGenStopException, QGenNoQueriesException
+from .exceptions import QGenStopException, QGenNoQueriesException
 
 class QGen(object):
     '''Prepare, check and run queries against a MySQL database

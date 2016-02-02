@@ -4,5 +4,4 @@ __author__ = 'Fabrizio Furnari'
 __license__ = 'GPL v3'
 __copyright__ = 'Copyright 2015 Fabrizio Furnari'
 
-from qgen import QGen
-from exceptions import QGenStopException, QGenNoQueriesException
+from .qgen import QGen
